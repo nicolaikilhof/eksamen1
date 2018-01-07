@@ -1,17 +1,92 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: open sans;
+}
+
+body main div.reviewdiv {
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+body main div.reviewdiv div.facebook div.stars img {
+  max-width: 10%;
+}
+body main div.reviewdiv h5 {
+  font-weight: lighter;
+}
+body main div.reviewdiv div.reviews div.review p {
+  margin-bottom: 0;
+}
+body main div.reviewdiv div.reviews div.review h4 {
+  color: white;
+  font-weight: bolder;
+  margin-top: 0;
+}
+body main div.reviewdiv h5 {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+body main div.norreport {
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+body main div.norreport h5 {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+body main div.ydelsesikoner {
+  display: block;
+  margin: 0 auto;
+}
+body main div.ydelsesikoner figure {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2em;
+}
+body main div.ydelsesikoner figure img {
+  max-width: 60%;
+}
+body main div.ydelsesikoner figure h6 {
+  color: #FFBC37;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+body main div.ydelsesikoner figure figcaption {
+  color: white;
 }
 
 body {
   margin: 0;
   background: black;
 }
-body figure {
-  margin: 0;
+body div.desktopindexbillede {
+  display: none;
 }
-body figure img {
+body div.mobilindexbillede img {
   max-width: 100%;
+}
+body div.mobilindexbillede p {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  font-size: 2.2em;
+  color: white;
+  top: 28.7%;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 body video {
   display: none;
@@ -28,7 +103,7 @@ body footer {
   background-color: #292929;
 }
 body footer div {
-  max-width: 80%;
+  max-width: 90%;
   display: block;
   margin: 0 auto;
 }
@@ -38,7 +113,7 @@ body footer div form {
   max-width: 100%;
 }
 body footer div form div.mail {
-  margin: 0 0 0 2em;
+  margin: 0 0 0 1em;
 }
 body footer div form div button {
   background-color: #B7B7B7;
@@ -97,7 +172,7 @@ body main p {
 body nav a.navn {
   text-decoration: none;
   color: white;
-  font-family: Open sans;
+  font-family: Playfair Display;
   padding-left: 2%;
   padding-top: 3%;
   clear: both;
@@ -128,14 +203,15 @@ body input + label {
   top: 1%;
   right: 5%;
   height: 65px;
-  width: 10%;
+  width: 9%;
   z-index: 5;
+  z-index: 1000000;
 }
 body input + label span {
   position: absolute;
   width: 100%;
-  height: 5%;
-  top: 31%;
+  height: 3%;
+  top: 33%;
   margin-top: -1px;
   left: 0;
   display: block;
@@ -144,7 +220,7 @@ body input + label span {
   transition: .5s;
 }
 body input + label span:first-child {
-  top: 16%;
+  top: 20%;
 }
 body input + label span:last-child {
   top: 47%;
@@ -177,6 +253,7 @@ body input ~ nav.mobil {
   transition: .5s;
   -webkit-transition-delay: .5s;
           transition-delay: .5s;
+  z-index: 100000;
 }
 body input ~ nav.mobil > ul {
   position: absolute;
@@ -228,8 +305,27 @@ body input:checked ~ nav > ul > li {
   body {
     margin: 0;
   }
-  body figure {
+  body div.mobilindexbillede {
     display: none;
+  }
+  body div.desktopindexbillede {
+    display: block;
+  }
+  body div.desktopindexbillede p {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-size: 3em;
+    color: white;
+    top: 72%;
+    display: block;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  body div.desktopindexbillede img {
+    max-width: 100%;
   }
   body video {
     display: block;
@@ -258,6 +354,8 @@ body input:checked ~ nav > ul > li {
     background-color: black;
     height: 3em;
     width: 100%;
+    position: fixed;
+    z-index: 100000000;
   }
   body nav.desktop a.navn {
     text-decoration: none;
@@ -333,5 +431,39 @@ body input:checked ~ nav > ul > li {
   }
   body footer div.someikoner {
     margin-top: 0.8em;
+  }
+
+  body main div.ydelsesikoner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 6em;
+  }
+  body main div.ydelsesikoner figure {
+    max-width: 20%;
+  }
+  body main div.norreport {
+    margin-top: 5em;
+  }
+  body main div.reviewdiv {
+    margin-top: 6em;
+    margin-bottom: 4em;
+  }
+  body main div.reviewdiv div.reviews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main div.reviewdiv div.reviews div.review {
+    max-width: 45%;
+  }
+  body main div.reviewdiv div.facebook div.stars img {
+    max-width: 5%;
   }
 }
